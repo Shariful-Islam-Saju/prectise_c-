@@ -1,20 +1,19 @@
 #include <iostream>
+#include <vector>
+#include <string>
 using namespace std;
 int main() {
-
-string cars[5];
-cars[0] = "Volvo";
-cars[1] = "BMW";
-cars[2] = "Ford";
-cars[3] = "Mazda";
-// cars[5] = "Toyota";
-for (string car : cars) {
-  cout << "This is "<< car<< " " << sizeof(car) << "\n";
+vector <string> fruits = {"apple", "banana", "cherry", "orange"};
+cout<< "Before Insertion"<<endl;
+fruits.push_back("grape");
+for (string fruit : fruits) {
+    cout << fruit << endl;
 }
-cars[4] = "Tesla";
 
-cout<< cars ;
-
-
-  return 0;
+fruits.insert(fruits.begin(), "tomato");
+cout  << "After Insertion"<<endl;
+for (string fruit : fruits) {
+    cout << fruit << endl;
+}
+return 0;
 }
