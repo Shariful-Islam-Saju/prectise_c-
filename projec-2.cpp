@@ -1,11 +1,20 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 int main() {
+	int length;
+	cin >> length;
+	int myArray[length];
+	for (int i = 0; i < length; i++) {
+	int arrayValue;
+	cin >> arrayValue;
+	myArray[i] = arrayValue;
+	}
 
-  double inNumber;
+	for ( int j = length; j-- ;){
+	cout << myArray[j] << " ";
+	};
 
-  cin >> inNumber;
-  cout << sqrt(inNumber);
-  return 0;
+
+  
+    return 0;
 }
